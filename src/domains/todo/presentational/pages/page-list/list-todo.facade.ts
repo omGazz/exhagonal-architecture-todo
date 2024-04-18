@@ -9,8 +9,6 @@ export class ListToDoFacade {
   listService = inject(ListService);
 
   public readonly isPendingList = computed(() => this.listService.isPending());
-
-
   public readonly list = computed(() => this.listService.list());
 
   getList(): void {
