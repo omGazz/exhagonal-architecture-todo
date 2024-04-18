@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, delay, of } from 'rxjs';
-import { data } from '../../../core/utils/fake-data';
-import { todoDTO } from '../models/types/to-do.model';
-import { TodoPort } from '../ports/todo.port';
+import { data } from '../../../../core/utils/fake-data';
+import { todoDTO } from '../../domain/types/to-do.model';
+import { TodoPort } from '../../domain/ports/todo.port';
 
 @Injectable({
   providedIn: 'root',

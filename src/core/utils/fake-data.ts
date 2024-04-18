@@ -1,4 +1,4 @@
-import { todoDTO } from "src/domains/todo/models/types/to-do.model";
+import { todoDTO } from "src/domains/todo/domain/types/to-do.model";
 
 export const data = [
     {

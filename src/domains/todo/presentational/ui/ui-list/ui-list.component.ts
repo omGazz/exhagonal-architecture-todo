@@ -7,7 +7,7 @@ import {
   input,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { todoDTO } from 'src/domains/todo/models/types/to-do.model';
+import { todoDTO } from 'src/domains/todo/domain/types/to-do.model';
 
 @Component({
   selector: 'ui-list',

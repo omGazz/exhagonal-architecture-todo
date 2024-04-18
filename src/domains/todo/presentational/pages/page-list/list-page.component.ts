@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { UiListComponent } from '../../ui/ui-list/ui-list.component';
 import { ListToDoFacade } from 'src/domains/todo/presentational/pages/page-list/list-todo.facade';
-import { ToDo } from 'src/domains/todo/models/entities/todo.entity';
+import { ToDo } from 'src/domains/todo/domain/entities/todo.entity';
 
 @Component({
   selector: 'list-page',

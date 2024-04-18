@@ -1,6 +1,6 @@
 import { Injectable, computed, inject } from '@angular/core';
-import { ListService } from '../../../services/list.service';
-import { todoDTO } from 'src/domains/todo/models/types/to-do.model';
+import { ListService } from '../../../application/services/list.service';
+import { todoDTO } from 'src/domains/todo/domain/types/to-do.model';
 
 @Injectable({
   providedIn: 'root',

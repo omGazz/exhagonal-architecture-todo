@@ -1,8 +1,8 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { todoDTO } from '../models/types/to-do.model';
-import { TodoPort } from '../ports/todo.port';
+import { todoDTO } from '../../domain/types/to-do.model';
+import { TodoPort } from '../../domain/ports/todo.port';
 import { Loading } from 'src/core/utils/loading.decorator';
-import { ToDo } from '../models/entities/todo.entity';
+import { ToDo } from '../../domain/entities/todo.entity';
 
 @Injectable({
   providedIn: 'root'

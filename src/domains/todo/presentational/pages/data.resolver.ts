@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { DetailToDoFacade } from './page-detail/detail-todo.facade';
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
-import { ListService } from '../../services/list.service';
+import { ListService } from '../../application/services/list.service';
 import { ListToDoFacade } from './page-list/list-todo.facade';
 
 export const todoDetailResolver: ResolveFn<void> = (
