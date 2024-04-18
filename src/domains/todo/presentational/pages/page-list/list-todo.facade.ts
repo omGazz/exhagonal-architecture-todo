@@ -1,6 +1,6 @@
 import { Injectable, computed, inject } from '@angular/core';
-import { toDo } from '../../../models/to-do.model';
 import { ListService } from '../../../services/list.service';
+import { todoDTO } from 'src/domains/todo/models/types/to-do.model';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +15,7 @@ export class ListToDoFacade {
     this.listService.getList();
   }
 
-  addItem(item: toDo): void {
+  addItem(item: todoDTO): void {
     this.listService.addItem(item);
   }
 

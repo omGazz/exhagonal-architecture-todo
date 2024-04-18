@@ -6,10 +6,8 @@ import {
   Output,
   input,
 } from '@angular/core';
-import { toDo } from '../../../models/to-do.model';
 import { RouterLink } from '@angular/router';
-import { FakeTodoAdapter } from 'src/domains/todo/adapters/fake-todo.adapter';
-import { TodoPort } from 'src/domains/todo/ports/todo.port';
+import { todoDTO } from 'src/domains/todo/models/types/to-do.model';
 
 @Component({
   selector: 'ui-list',
@@ -18,12 +16,11 @@ import { TodoPort } from 'src/domains/todo/ports/todo.port';
   templateUrl: './ui-list.component.html',
   styleUrl: './ui-list.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  //providers: [{ provide: TodoPort, useClass: FakeTodoAdapter }],
 })
 export class UiListComponent {
   @Output() onRemoveItemEvent = new EventEmitter<number>();
 
-  readonly list = input.required<toDo[]>();
+  readonly list = input.required<todoDTO[]>();
   readonly isPending = input.required<boolean>();
 
   deleteItem(id: number) {
