@@ -1,6 +1,7 @@
 import { inject } from '@angular/core';
 import { ToDoFacade } from '../../services/todo.facade';
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
+import { ListService } from '../../services/list.service';
 
 export const todoDetailResolver: ResolveFn<void> = (
   route: ActivatedRouteSnapshot
@@ -10,6 +11,7 @@ export const todoDetailResolver: ResolveFn<void> = (
 
 export const todoListResolver: ResolveFn<void> = () => {
   const service = inject(ToDoFacade);
-  if (service.hasFetched) return;
+  const listService = inject(ListService);
+  if (listService.hasFetched) return;
   return service.getList();
 };

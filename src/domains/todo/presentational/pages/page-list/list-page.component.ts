@@ -20,7 +20,7 @@ import { ToDoFacade } from '../../../services/todo.facade';
 export class ListPageComponent {
   facade = inject(ToDoFacade);
   list = computed(() => this.facade.list());
-  isPending = computed(() => this.facade.isPending());
+  isPending = computed(() => this.facade.isPendingList());
 
   addItem() {
     this.facade.addItem({
