@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
-import { ToDoFacade } from '../../../services/todo.facade';
+import { DetailToDoFacade } from './detail-todo.facade';
 
 @Component({
   selector: 'lazy-detail',
@@ -13,6 +13,6 @@ import { ToDoFacade } from '../../../services/todo.facade';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DetailPageComponent { 
-  facade = inject(ToDoFacade)
+  facade = inject(DetailToDoFacade)
   item = computed(() => this.facade.detail());
 }

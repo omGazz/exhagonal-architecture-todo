@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { toDo } from '../../../models/to-do.model';
 import { UiListComponent } from '../../ui/ui-list/ui-list.component';
-import { ToDoFacade } from '../../../services/todo.facade';
+import { ListToDoFacade } from 'src/domains/todo/presentational/pages/page-list/list-todo.facade';
 
 @Component({
   selector: 'list-page',
@@ -18,7 +18,7 @@ import { ToDoFacade } from '../../../services/todo.facade';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListPageComponent {
-  facade = inject(ToDoFacade);
+  facade = inject(ListToDoFacade);
   list = computed(() => this.facade.list());
   isPending = computed(() => this.facade.isPendingList());
 
