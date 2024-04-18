@@ -1,3 +1,4 @@
+// Ye I know, I'm using type for now
 export type toDo = {
     id: number;
     title: string;

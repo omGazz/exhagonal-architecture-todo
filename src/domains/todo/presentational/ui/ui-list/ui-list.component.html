@@ -1,0 +1,16 @@
+<div class="ui-list">
+  @if(!isPending()){ @for (item of list(); track item.id) {
+  <div class="item">
+    <p>{{ item.title }}</p>
+    <p>{{ item.description }}</p>
+    <div>
+      <button (click)="deleteItem(item.id)">REMOVE ITEM</button>
+      <a [routerLink]="'/detail/' + item.id" class="link">detail</a>
+    </div>
+  </div>
+  } @empty {
+  <p>No items found</p>
+  } } @else {
+  <p>Loading...</p>
+  }
+</div>

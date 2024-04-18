@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { todoDetailResolver, todoListResolver } from 'src/domains/todo/presentational/pages/data.resolver';
 
 const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('../feature/todo:domain/list:feature/list.component').then(
-        (m) => m.ListComponent
+      import('../domains/todo/presentational/pages/page-list/list-page.component').then(
+        (m) => m.ListPageComponent
       ),
+      resolve: {
+        todos: todoListResolver
+      }
   },
   {
-    path: 'detail',
+    path: 'detail/:id',
     loadComponent: () =>
-      import('../feature/todo:domain/detail:feature/detail.component').then(
-        (m) => m.DetailComponent
+      import('../domains/todo/presentational/pages/page-detail/detail-page.component').then(
+        (m) => m.DetailPageComponent
       ),
+      resolve: {
+        todos: todoDetailResolver
+      }
   },
 ];
 

@@ -1,0 +1,5 @@
+<section class="list-page">
+  <button (click)="addItem()">ADD ITEM</button>
+  <button (click)="refreshList()">RELOAD LIST</button>
+  <ui-list [list]="list()" [isPending]="isPending()" (onRemoveItemEvent)="deleteItem($event)"></ui-list>
+</section>

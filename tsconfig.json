@@ -30,7 +30,7 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
     "_enabledBlockTypes": [
-      "if", "switch", "@for"
+      "if", "switch", "for"
     ]
   }
 }
