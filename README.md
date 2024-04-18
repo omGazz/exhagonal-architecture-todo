@@ -3,11 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
 ## Branches
-- main
+- **main** =>
 Base architecture
-- feature/facade-per-page
+- **feature/facade-per-page** =>
 Split services with one facade
-- feature/multi-facade
+- **feature/multi-facade** =>
 Multiple services and multiple facades
 
 ## Development server
