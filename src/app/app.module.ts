@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FakeTodoAdapter } from 'src/domains/todo/adapters/fake-todo.adapter';
-import { TodoPort } from 'src/domains/todo/ports/todo.port';
+import { TodoShellModule } from 'src/domains/todo/presentational/todo-shell/todo-shell.module';
+
 
 @NgModule({
   declarations: [
@@ -12,9 +12,9 @@ import { TodoPort } from 'src/domains/todo/ports/todo.port';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TodoShellModule
   ],
-  providers: [{ provide: TodoPort, useClass: FakeTodoAdapter }],
 
   bootstrap: [AppComponent]
 })
