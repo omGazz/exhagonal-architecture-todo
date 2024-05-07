@@ -1,4 +1,4 @@
-import { toDo } from "src/domains/todo/models/to-do.model";
+import { todoDTO } from "src/domains/todo/domain/types/to-do.model";
 
 export const data = [
     {
@@ -36,4 +36,4 @@ export const data = [
       status: 'pending',
       tags: ['personal', 'family'],
     },
-  ] as toDo[];
+  ] as todoDTO[];

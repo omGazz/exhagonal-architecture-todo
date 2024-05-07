@@ -1,0 +1,299 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.3.3",
+  "deps": {
+    "@angular/animations": "^17.3.4",
+    "@angular/common": "^17.3.4",
+    "@angular/compiler": "^17.3.4",
+    "@angular/core": "^17.3.4",
+    "@angular/forms": "^17.3.4",
+    "@angular/platform-browser": "^17.3.4",
+    "@angular/platform-browser-dynamic": "^17.3.4",
+    "@angular/router": "^17.3.4",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.4",
+    "@angular-devkit/build-angular": "^17.3.4",
+    "@angular-eslint/builder": "17.3.0",
+    "@angular-eslint/eslint-plugin": "17.3.0",
+    "@angular-eslint/eslint-plugin-template": "17.3.0",
+    "@angular-eslint/schematics": "17.3.0",
+    "@angular-eslint/template-parser": "17.3.0",
+    "@angular/cli": "~17.3.4",
+    "@angular/compiler-cli": "^17.3.4",
+    "@types/jasmine": "~4.3.0",
+    "@typescript-eslint/eslint-plugin": "7.2.0",
+    "@typescript-eslint/parser": "7.2.0",
+    "eslint": "^8.57.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~5.4.5"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "6686520031028425313"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "14645878845883387518"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13044518069027839699"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5331566439708925252"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17038929134016848735"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "13047217081648616981"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": "README.md",
+        "hash": "7253916744949795054"
+      },
+      {
+        "file": "angular.json",
+        "hash": "17796469830813975522"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "8221693287489964871"
+      },
+      {
+        "file": "package.json",
+        "hash": "4788973383495422239"
+      },
+      {
+        "file": "src/app/app-routing.module.ts",
+        "hash": "3709852039906799958"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "4431940342009126674"
+      },
+      {
+        "file": "src/app/app.component.scss",
+        "hash": "11331214534715070004"
+      },
+      {
+        "file": "src/app/app.component.spec.ts",
+        "hash": "16975518256146206536"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "1606702329279163063"
+      },
+      {
+        "file": "src/app/app.module.ts",
+        "hash": "16541852288948528945"
+      },
+      {
+        "file": "src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/core/application/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/core/error-handler/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/core/infrastructure/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/core/interceptors/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/core/utils/fake-data.ts",
+        "hash": "3645502803449157688"
+      },
+      {
+        "file": "src/core/utils/loading.decorator.ts",
+        "hash": "9518631273021287588"
+      },
+      {
+        "file": "src/core/validators/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/domains/todo/application/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/domains/todo/application/services/detail.service.ts",
+        "hash": "5162514461649810815"
+      },
+      {
+        "file": "src/domains/todo/application/services/list.service.ts",
+        "hash": "5761446266815082983"
+      },
+      {
+        "file": "src/domains/todo/domain/entities/todo.entity.ts",
+        "hash": "10881201268445573905"
+      },
+      {
+        "file": "src/domains/todo/domain/ports/notification.port.ts",
+        "hash": "16598947338246199598"
+      },
+      {
+        "file": "src/domains/todo/domain/ports/todo.port.ts",
+        "hash": "7395243782617762509"
+      },
+      {
+        "file": "src/domains/todo/domain/types/to-do.model.ts",
+        "hash": "13340746350591786306"
+      },
+      {
+        "file": "src/domains/todo/infrastructure/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/domains/todo/infrastructure/adapters/fake-todo.adapter.ts",
+        "hash": "17261426033684080365"
+      },
+      {
+        "file": "src/domains/todo/infrastructure/adapters/graph-ql-todo.adapter.ts",
+        "hash": "16866301675003245431"
+      },
+      {
+        "file": "src/domains/todo/infrastructure/adapters/http-todo.adapter.ts",
+        "hash": "12149460424841657540"
+      },
+      {
+        "file": "src/domains/todo/presentational/pages/data.resolver.ts",
+        "hash": "16048656847278816646"
+      },
+      {
+        "file": "src/domains/todo/presentational/pages/page-detail/detail-page.component.css",
+        "hash": "13027103444035360129"
+      },
+      {
+        "file": "src/domains/todo/presentational/pages/page-detail/detail-page.component.html",
+        "hash": "13656201818426008119"
+      },
+      {
+        "file": "src/domains/todo/presentational/pages/page-detail/detail-page.component.ts",
+        "hash": "2941525087419569127"
+      },
+      {
+        "file": "src/domains/todo/presentational/pages/page-detail/detail-todo.facade.ts",
+        "hash": "9798502083194970061"
+      },
+      {
+        "file": "src/domains/todo/presentational/pages/page-list/list-page.component.css",
+        "hash": "16739948672219429527"
+      },
+      {
+        "file": "src/domains/todo/presentational/pages/page-list/list-page.component.html",
+        "hash": "1520616544370028793"
+      },
+      {
+        "file": "src/domains/todo/presentational/pages/page-list/list-page.component.ts",
+        "hash": "6197973587565728926"
+      },
+      {
+        "file": "src/domains/todo/presentational/pages/page-list/list-todo.facade.ts",
+        "hash": "1533875103583030654"
+      },
+      {
+        "file": "src/domains/todo/presentational/todo-shell/todo-shell-routing.module.ts",
+        "hash": "15021597536021522925"
+      },
+      {
+        "file": "src/domains/todo/presentational/todo-shell/todo-shell.module.ts",
+        "hash": "6172704254378866492"
+      },
+      {
+        "file": "src/domains/todo/presentational/ui/ui-detail/ui-detail.component.css",
+        "hash": "13027103444035360129"
+      },
+      {
+        "file": "src/domains/todo/presentational/ui/ui-detail/ui-detail.component.html",
+        "hash": "124789333100199608"
+      },
+      {
+        "file": "src/domains/todo/presentational/ui/ui-detail/ui-detail.component.ts",
+        "hash": "7138106352403349700"
+      },
+      {
+        "file": "src/domains/todo/presentational/ui/ui-list/ui-list.component.css",
+        "hash": "18044424102472558494"
+      },
+      {
+        "file": "src/domains/todo/presentational/ui/ui-list/ui-list.component.html",
+        "hash": "15940875111684645247"
+      },
+      {
+        "file": "src/domains/todo/presentational/ui/ui-list/ui-list.component.ts",
+        "hash": "4383404922633299629"
+      },
+      {
+        "file": "src/favicon.ico",
+        "hash": "3887491056732423038"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "14078650329252843665"
+      },
+      {
+        "file": "src/infrastructure/todo/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/infrastructure/todo/adapters/fake-todo.adapter.ts",
+        "hash": "13315000440715898998"
+      },
+      {
+        "file": "src/infrastructure/todo/adapters/graph-ql-todo.adapter.ts",
+        "hash": "8970450154852567960"
+      },
+      {
+        "file": "src/infrastructure/todo/adapters/http-todo.adapter.ts",
+        "hash": "14411930946865072788"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "12246588107753938993"
+      },
+      {
+        "file": "src/styles.scss",
+        "hash": "5195668842064076916"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "16324261749533975567"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "10133556768403545513"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "15575553540147145788"
+      }
+    ],
+    "projectFileMap": {}
+  }
+}

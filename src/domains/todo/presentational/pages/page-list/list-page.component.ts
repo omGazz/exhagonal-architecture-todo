@@ -5,9 +5,9 @@ import {
   computed,
   inject,
 } from '@angular/core';
-import { toDo } from '../../../models/to-do.model';
 import { UiListComponent } from '../../ui/ui-list/ui-list.component';
-import { ToDoFacade } from '../../../services/todo.facade';
+import { ListToDoFacade } from 'src/domains/todo/presentational/pages/page-list/list-todo.facade';
+import { ToDo } from 'src/domains/todo/domain/entities/todo.entity';
 
 @Component({
   selector: 'list-page',
@@ -18,16 +18,13 @@ import { ToDoFacade } from '../../../services/todo.facade';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ListPageComponent {
-  facade = inject(ToDoFacade);
+  facade = inject(ListToDoFacade);
   list = computed(() => this.facade.list());
-  isPending = computed(() => this.facade.isPending());
+  isPending = computed(() => this.facade.isPendingList());
 
   addItem() {
-    this.facade.addItem({
-      id: 100,
-      title: 'New Item',
-      description: 'New Item Description',
-    } as toDo);
+    const entity = new ToDo(100, 'New Item', 'New Item Description', 'New', []);
+    this.facade.addItem(entity.toDto());
   }
   deleteItem(id: number) {
     this.facade.removeItem(id);
