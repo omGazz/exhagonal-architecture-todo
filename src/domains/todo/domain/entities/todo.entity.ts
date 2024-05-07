@@ -1,5 +1,8 @@
 
 export class ToDo {
+    /*
+    Here we should use value objects instead of primitive types.
+    */
     constructor(public id: number, public title: string, public description: string, public status: string, public tags: string[]) {
     }
 

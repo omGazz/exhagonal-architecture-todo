@@ -5,13 +5,13 @@ import { Loading } from 'src/core/utils/loading.decorator';
 import { ToDo } from '../../domain/entities/todo.entity';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ListService {
   public readonly list = signal([] as todoDTO[]);
   public readonly isPending = signal(true);
 
-  protected readonly port  = inject(TodoPort);
+  protected readonly port = inject(TodoPort);
 
   public hasFetched = false;
 
@@ -25,14 +25,18 @@ export class ListService {
 
   @Loading('isPending')
   addItem(item: todoDTO): void {
-    const entity = new ToDo(item.id, item.title, item.description, item.status, item.tags);
-
+    const entity = new ToDo(
+      item.id,
+      item.title,
+      item.description,
+      item.status,
+      item.tags
+    );
     this.list.update((list) => [...list, entity.toDto<todoDTO>()]);
   }
 
   @Loading('isPending')
   removeItem(id: number): void {
-
     this.list.update((list) => list.filter((item) => item.id !== id));
   }
 }

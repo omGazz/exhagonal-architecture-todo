@@ -1,0 +1,26 @@
+.ui-form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 15px;
+
+    &__wrapper-input{
+        padding: 5px;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+        margin: 5px 0;
+    }
+
+    &__label{
+        display: block;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    &__input{
+        width: 90%;
+        padding: 5px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+}

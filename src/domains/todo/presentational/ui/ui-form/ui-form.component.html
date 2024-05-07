@@ -1,0 +1,20 @@
+<div class="ui-form">
+  <div class="ui-form__wrapper-input">
+    <label class="ui-form__label" for="title">Title</label>
+    <input class="ui-form__input" type="text" name="title" [formControl]="title" />
+  </div>
+  <div class="ui-form__wrapper-input">
+    <label class="ui-form__label" for="description">Description</label>
+    <input class="ui-form__input" type="text" name="description" [formControl]="description" />
+  </div>
+  <div class="ui-form__wrapper-input">
+    <label class="ui-form__label" for="status">Status</label>
+    <input class="ui-form__input" type="text" name="status" [formControl]="status" />
+  </div>
+  <div class="ui-form__wrapper-input">
+    <label class="ui-form__label" for="tags">Tags</label>
+    <input class="ui-form__input" type="text" name="tags" [formControl]="tags" />
+  </div>
+
+  <button (click)="addItem()">ADD</button>
+</div>
