@@ -18,12 +18,12 @@ import { todoDTO } from 'src/domains/todo/domain/types/to-do.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UiListComponent {
-  @Output() onRemoveItemEvent = new EventEmitter<number>();
+  @Output() removeItemEvent = new EventEmitter<number>();
 
   readonly list = input.required<todoDTO[]>();
   readonly isPending = input.required<boolean>();
 
   deleteItem(id: number) {
-    this.onRemoveItemEvent.emit(id);
+    this.removeItemEvent.emit(id);
   }
 }
