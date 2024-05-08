@@ -6,7 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - **main** =>
 Base architecture
 
-- main => base and simple architecture
+- **feature/signal-store** => POC using SIGNAL-STORE (from ngrx) as infrastructure and adapter
+- **feature/ngrx-store** => POC using NGRX as infrastructure and adapter
 
 ## Development server
 
