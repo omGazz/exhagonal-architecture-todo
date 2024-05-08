@@ -15,10 +15,10 @@ export class ListService {
 
   public hasFetched = false;
 
+  @Loading('isPending')
   getList(): void {
     this.port.getList().subscribe((list) => {
       this.list.set(list);
-      this.isPending.set(false);
       this.hasFetched = true;
     });
   }
