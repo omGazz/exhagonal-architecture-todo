@@ -12,7 +12,7 @@ import { UiFormComponent } from '../../ui/ui-form/ui-form.component';
 import { todoDTO } from 'src/domains/todo/domain/types/to-do.model';
 
 @Component({
-  selector: 'list-page',
+  selector: 'app-list-page',
   standalone: true,
   imports: [CommonModule, UiListComponent, UiFormComponent],
   templateUrl: './list-page.component.html',

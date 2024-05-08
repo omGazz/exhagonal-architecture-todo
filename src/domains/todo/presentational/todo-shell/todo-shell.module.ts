@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TodoShellRoutingModule } from './todo-shell-routing.module';
 import { TodoPort } from '../../domain/ports/todo.port';
-import { FakeTodoAdapter } from '../../infrastructure/adapters/fake-todo.adapter';
+import { BrowserStoreTodoAdapter } from 'src/infrastructure/todo/adapters/browser-store-todo.adapter';
 
 
 @NgModule({
@@ -12,6 +12,6 @@ import { FakeTodoAdapter } from '../../infrastructure/adapters/fake-todo.adapter
     CommonModule,
     TodoShellRoutingModule
   ],
-  providers: [{ provide: TodoPort, useClass: FakeTodoAdapter }],
+  providers: [{ provide: TodoPort, useClass: BrowserStoreTodoAdapter }],
 })
 export class TodoShellModule { }

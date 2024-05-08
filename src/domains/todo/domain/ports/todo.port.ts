@@ -6,4 +6,6 @@ import { Injectable } from '@angular/core';
 export abstract class TodoPort {
   public abstract getList(): Observable<todoDTO[]>;
   public abstract getDetail(id: number): Observable<todoDTO>;
+  public abstract add(item: todoDTO): Observable<todoDTO[]>;
+  public abstract remove(id: number): Observable<todoDTO[]>;
 }

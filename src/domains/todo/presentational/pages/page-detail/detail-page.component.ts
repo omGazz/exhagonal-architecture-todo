@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { DetailToDoFacade } from './detail-todo.facade';
 
 @Component({
-  selector: 'lazy-detail',
+  selector: 'app-detail',
   standalone: true,
   imports: [
     CommonModule,
@@ -15,4 +15,5 @@ import { DetailToDoFacade } from './detail-todo.facade';
 export class DetailPageComponent { 
   facade = inject(DetailToDoFacade)
   item = computed(() => this.facade.detail());
+  isPending = computed(() => this.facade.isPendingDetail());
 }

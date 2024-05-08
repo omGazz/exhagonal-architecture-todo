@@ -32,11 +32,17 @@ export class ListService {
       item.status,
       item.tags
     );
-    this.list.update((list) => [...list, entity.toDto<todoDTO>()]);
+
+    this.port.add(entity.toDto<todoDTO>()).subscribe((res) => {
+      this.list.update(() => [...res]);
+    });
   }
 
   @Loading('isPending')
   removeItem(id: number): void {
     this.list.update((list) => list.filter((item) => item.id !== id));
+    this.port.remove(id).subscribe((res) => {
+      this.list.update(() => [...res]);
+    });
   }
 }

@@ -1,4 +1,9 @@
-<p>detail works!</p>
-<p>This is a smart component</p>
-<h1>{{ item().title}}</h1>
-<h1>{{ item().description}}</h1>
+@if(!isPending()){
+    <h3>ID: {{ item().id }}</h3>
+    <h1>TITLE: {{ item().title}}</h1>
+    <h1>DESCRIPTION: {{ item().description}}</h1>
+    <p>STATUS: {{ item().status}}</p>
+    <p>TAGS: {{ item().tags}}</p>
+}@else{
+    <h1>Loading</h1>
+}
