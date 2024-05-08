@@ -27,7 +27,10 @@
           "error",
           {
             "type": "element",
-            "prefix": ["app", "ui"],
+            "prefix": [
+              "app",
+              "ui"
+            ],
             "style": "kebab-case"
           }
         ]
@@ -42,6 +45,14 @@
         "plugin:@angular-eslint/template/accessibility"
       ],
       "rules": {}
+    },
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "plugin:@ngrx/recommended"
+      ]
     }
   ]
 }
