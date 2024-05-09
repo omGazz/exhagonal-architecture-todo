@@ -1,19 +1,29 @@
 import { todoDTO } from 'src/domains/todo/domain/types/to-do.model';
 import { createReducer, on } from '@ngrx/store';
 import * as TodoActions from './todo.actions';
-export interface State {
+
+export const TODO_FEATURE_KEY = 'todo';
+export interface TodoState {
   list: todoDTO[];
-  test: number;
+  detail: todoDTO;
 }
 
-export const initialState: State = {
+export const initialState: TodoState = {
   list: [],
-  test: 0,
+  detail: {} as todoDTO,
 };
 export const todoReducer = createReducer(
   initialState,
   on(
     TodoActions.addTodo,
-    (state): State => ({ ...state, test: state.test + 1 })
+    (state, data): TodoState => ({ ...state, list: state.list.concat(data.item) })
+  ),
+  on(
+    TodoActions.removeTodoById,
+    (state, data): TodoState => ({ ...state, list: state.list.filter((item) => item.id !== data.id)})
+  ),
+  on(
+    TodoActions.selectTodoById,
+    (state, data): TodoState => ({ ...state, detail: state.list.find((item) => item.id === data.id) || {} as todoDTO})
   )
 );

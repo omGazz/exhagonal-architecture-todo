@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 import { UiListComponent } from '../../ui/ui-list/ui-list.component';
 import { ListToDoFacade } from 'src/domains/todo/presentational/pages/page-list/list-todo.facade';
-import { ToDo } from 'src/domains/todo/domain/entities/todo.entity';
 import { UiFormComponent } from '../../ui/ui-form/ui-form.component';
 import { todoDTO } from 'src/domains/todo/domain/types/to-do.model';
 
@@ -26,8 +25,8 @@ export class ListPageComponent {
 
   addItem(item: todoDTO) {
     const id = Math.floor(Math.random() * 1000);
-    const entity = new ToDo(id, item.title, item.description, item.status, item.tags);
-    this.facade.addItem(entity.toDto());
+    item.id = id;
+    this.facade.addItem(item);
   }
   deleteItem(id: number) {
     this.facade.removeItem(id);

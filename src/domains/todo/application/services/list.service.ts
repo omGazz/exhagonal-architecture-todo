@@ -34,7 +34,7 @@ export class ListService {
     );
 
     this.port.add(entity.toDto<todoDTO>()).subscribe((res) => {
-      console.log(res);
+      console.log('add res', res);
       this.list.update(() => [...res]);
     });
   }

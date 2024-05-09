@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { todoDetailResolver, todoListResolver } from '../pages/data.resolver';
+// import { TODO_FEATURE_KEY, todoReducer } from 'src/infrastructure/todo/ngrx/todo.reducer';
+// import { provideState } from '@ngrx/store';
 
 const routes: Routes = [
   {
@@ -10,8 +12,11 @@ const routes: Routes = [
         (m) => m.ListPageComponent
       ),
       resolve: {
-        todos: todoListResolver
-      }
+        todos: todoListResolver,
+      },
+      // providers: [
+      //   provideState({ name: TODO_FEATURE_KEY, reducer: todoReducer })
+      // ],
   },
   {
     path: 'detail/:id',
@@ -19,14 +24,14 @@ const routes: Routes = [
       import('../pages/page-detail/detail-page.component').then(
         (m) => m.DetailPageComponent
       ),
-      resolve: {
-        todos: todoDetailResolver
-      }
+    resolve: {
+      todos: todoDetailResolver,
+    },
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class TodoShellRoutingModule { }
+export class TodoShellRoutingModule {}

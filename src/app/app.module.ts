@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodoShellModule } from 'src/domains/todo/presentational/todo-shell/todo-shell.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    StoreModule.forRoot({}),
     BrowserModule,
     AppRoutingModule,
     TodoShellModule,

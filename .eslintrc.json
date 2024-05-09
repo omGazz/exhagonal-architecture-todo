@@ -29,7 +29,8 @@
             "type": "element",
             "prefix": [
               "app",
-              "ui"
+              "ui",
+              "lazy"
             ],
             "style": "kebab-case"
           }
