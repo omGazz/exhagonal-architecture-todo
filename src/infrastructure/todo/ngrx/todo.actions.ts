@@ -6,6 +6,11 @@ export const addTodo = createAction(
   props<{ item: todoDTO }>()
 );
 
+export const addTodoSuccess = createAction(
+  '[Todo List Page] Add Item Success',
+  props<{ item: todoDTO }>()
+);
+
 export const removeTodoById = createAction(
   '[Todo List Page] Remove Item By Id',
   props<{ id: number }>()

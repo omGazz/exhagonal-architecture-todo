@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TodoShellModule } from 'src/domains/todo/presentational/todo-shell/todo-shell.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { StoreModule } from '@ngrx/store';
     AppRoutingModule,
     TodoShellModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    EffectsModule.forRoot([]),
   ],
 
   bootstrap: [AppComponent]

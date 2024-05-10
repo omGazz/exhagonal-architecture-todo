@@ -14,8 +14,12 @@ export const initialState: TodoState = {
 };
 export const todoReducer = createReducer(
   initialState,
+  // on(
+  //   TodoActions.addTodo,
+  //   (state, data): TodoState => ({ ...state, list: state.list.concat(data.item) })
+  // ),
   on(
-    TodoActions.addTodo,
+    TodoActions.addTodoSuccess,
     (state, data): TodoState => ({ ...state, list: state.list.concat(data.item) })
   ),
   on(

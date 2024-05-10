@@ -6,14 +6,24 @@ import { TodoPort } from '../../domain/ports/todo.port';
 //import { SignalStoreTodoAdapter } from 'src/infrastructure/todo/adapters/signal-store-todo.adapter';
 //import { TodoStore } from 'src/infrastructure/todo/+state/todo.store';
 import { StoreModule } from '@ngrx/store';
-import { TODO_FEATURE_KEY, todoReducer } from 'src/infrastructure/todo/ngrx/todo.reducer';
+import {
+  TODO_FEATURE_KEY,
+  todoReducer,
+} from 'src/infrastructure/todo/ngrx/todo.reducer';
 import { NgrxTodoAdapter } from 'src/infrastructure/todo/adapters/ngrx-todo.adapter';
+import { EffectsModule } from '@ngrx/effects';
+import { TodoEffects } from 'src/infrastructure/todo/ngrx/todo.effects';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, TodoShellRoutingModule, StoreModule.forFeature(TODO_FEATURE_KEY, todoReducer)],
-  providers: [
-    { provide: TodoPort, useClass: NgrxTodoAdapter },
+  imports: [
+    CommonModule,
+    TodoShellRoutingModule,
+    StoreModule.forFeature(TODO_FEATURE_KEY, todoReducer),
+    EffectsModule.forFeature(TodoEffects),
+    HttpClientModule
   ],
+  providers: [{ provide: TodoPort, useClass: NgrxTodoAdapter }],
 })
 export class TodoShellModule {}
